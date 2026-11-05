@@ -131,15 +131,15 @@ func (d *Downloader) downloadFile(url string, path string) error {
 }
 
 func sanitizeFilename(name string) string {
-	name = strings.ReplaceAll(name, "/", "-")
-	name = strings.ReplaceAll(name, "\\", "-")
-	name = strings.ReplaceAll(name, ":", "-")
-	name = strings.ReplaceAll(name, "*", "-")
-	name = strings.ReplaceAll(name, "?", "-")
-	name = strings.ReplaceAll(name, "\"", "-")
-	name = strings.ReplaceAll(name, "<", "-")
-	name = strings.ReplaceAll(name, ">", "-")
-	name = strings.ReplaceAll(name, "|", "-")
+	name = strings.ReplaceAll(name, "/", "／")
+	name = strings.ReplaceAll(name, "\\", "＼＼")
+	name = strings.ReplaceAll(name, ":", "：")
+	name = strings.ReplaceAll(name, "*", "＊")
+	name = strings.ReplaceAll(name, "?", "？")
+	name = strings.ReplaceAll(name, "\"", "＼")
+	name = strings.ReplaceAll(name, "<", "˂")
+	name = strings.ReplaceAll(name, ">", "˃")
+	name = strings.ReplaceAll(name, "|", "ǀ")
 	return strings.TrimSpace(name)
 }
 
